@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <title>Carrito de Compras</title>
+    <style>
+        .row{
+            width: 80%;
+        }
+        body{
+            background-color: rgb(214, 211, 211);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        
+        }
+       
+        .col {
+            margin-right: -20px;
+            margin-bottom: 10px;
+        }
+
+        #side {
+            float:right;
+            margin-top: -720px;
+            height: 66vh;
+        }
+
+        #precio {
+            border: none;
+        }
+        .btn-dark{
+            margin-bottom: 5px;
+            width: 100%;
+            
+        }
+        .btn-danger{
+            width: 100%;
+        }
+        .btn{
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .card{
+            border:1px black solid;
+            
+        }
+        .card,.card-img-top{
+            align-items: center;
+          
+        }
+      
+        .card-body{
+            text-align: center;
+        } 
+        
+             
+
+        .card-img-top{
+            width: 200px;
+            height: 200px;
+        }
+
+        #carrito-items{
+            background-color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 15px;
+            height: 100%;
+            
+        }
+
+        .tituloMarvel{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+            background-color: black;
+            border:1px black solid;
+            
+        }
+        .tituloMarvel>span{
+            text-decoration:underline;
+        }
+        .tituloMarvel > img{
+            width: 80px;
+            height: 30px;
+        }
+        .precio{
+            font-weight: bold;
+        }
+        h5{
+            font-family:fantasy;
+        }
+        .alert-warning{
+            text-align: center;
+        }
+        #total-carrito{
+            font-weight: bold;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tituloMarvel col-lg-12 col-md-6 alert alert-primary text-center fs-2" role="alert">
+            <img src="imgsCarrito/logo-marvel.png" alt="">
+            <span>FUNKO POP</span>
+        </div>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col col-lg-3">
+                <div class="card ">
+                    <img src="imgsCarrito/capitan-america.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CAPITÁN AMÉRICA</h5>
+                        <p class="precio">15.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('CAPITÁN AMÉRICA', 15.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 2 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/hulk.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">HULK</h5>
+                        <p class="precio">15.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('HULK', 15.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 3 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/lady-pool.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">LADY POOL</h5>
+                        <p class="precio">30.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('LADY POOL', 30.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+    
+             <!-- Producto 4 -->
+             <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SPIDERMAN</h5>
+                        <p class="precio">40.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('SPIDERMAN', 40.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 5 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/thor.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">THOR</h5>
+                        <p class="precio">30.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('THOR', 30.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 6 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/wolverine.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">WOLVERINE</h5>
+                        <p class="precio">50.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('WOLVERINE', 50.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 7 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/black-panther.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BLACKK PANTHER</h5>
+                        <p class="precio">30.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('BLACK PANTHER', 30.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 8 -->
+            <div class="col col-lg-3">
+                <div class="card">
+                    <img src="imgsCarrito/iron-man.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">IRON MAN</h5>
+                        <p class="precio">70.00 €</p>
+                        <button class="btn btn-success" onclick="agregarAlCarrito('IRON MAN', 70.00)"><img src="imgsCarrito/icono-carrito.png" alt="" height="30px" width="30px"></button>
+                    </div>
+                </div>
+            </div>
+           
+    
+        </div>
+    
+        
+    
+    
+         <!-- Carrito -->
+         <div class="carrito side1 col-lg-3" id="side">
+            <div class="alert alert-warning" role="alert">
+                CARRITO COMPRA
+            </div>
+            <div id="carrito-items">
+                <!-- Los productos añadidos aparecerán aquí -->
+            </div><br>
+            <div class="total alert alert-warning" role="alert">
+                Total Compra: <span id="total-carrito">0.00</span> €
+            </div>
+            <button class="btn btn-dark" id="finalizar-compra">Finalizar Compra</button><br>
+            <button class="btn btn-danger" id="eliminar-producto">Eliminar Producto</button>
+        </div>
+    </div>
+
+
+
+<script>
+// Array para almacenar los productos del carrito
+let carrito = [];
+
+// Función para agregar productos al carrito.
+// -> Cuando llame a la función tengo que indicar que nombre y precio del producto se va a añadir.
+function agregarAlCarrito(nombre, precio) {
+
+    // Verificar si el producto ya está en el carrito
+    let productoExistente = carrito.find(producto => producto.nombre === nombre);
+    // -> Si el producto ya existe, incrementar la cantidad.
+    if (productoExistente) {
+        productoExistente.cantidad++;
+        productoExistente.total = productoExistente.precio * productoExistente.cantidad; // Recalcular el total
+    } else {
+        // Si el producto no está en el carrito, agregarlo con cantidad 1
+        let producto = {
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1,
+            total: precio 
+        };
+
+        // Añadimos el producto creado al carrito.
+        carrito.push(producto);
+    }
+
+    // Actualizar la vista del carrito
+    actualizarCarrito();
+}
+
+// Función para actualizar la vista del carrito
+function actualizarCarrito() {
+    // Creamos una variable que represente el div donde estarán los items añadidos.
+    let carritoDiv = document.getElementById('carrito-items');
+    // Limpiamos el carrito para que no vuelva a añadir los productos ya agregados.
+    carritoDiv.innerHTML = ''; 
+
+    let totalCarrito = 0;
+
+    // Recorremos cada producto del carrito, y para cada uno de ellos se crea un div (carrito-item)
+    carrito.forEach((producto, index) => {
+        let itemDiv = document.createElement('div');
+        itemDiv.classList.add('carrito-item');
+
+        // El contenido de este será los datos del producto insertado y su total.
+        itemDiv.innerHTML = `
+        <div class="d-flex justify-content-between">
+            <p>${producto.nombre} x ${producto.cantidad}</p>
+            <p><span class="float-end">${producto.total.toFixed(2)} €</span></p>
+        </div>
+`;
+        // Añadimos el div al contenedor carrito-items.
+        carritoDiv.appendChild(itemDiv);
+
+        // Acumulamos el total.
+        totalCarrito += producto.total;
+    });
+
+    // Actualizar el total en el carrito
+    document.getElementById('total-carrito').textContent = totalCarrito.toFixed(2);
+}
+
+
+// Cuando hagamos click al botón finalizar compra:
+// -> Mostrar alerta con el resumen de la compra.
+document.getElementById('finalizar-compra').addEventListener('click', function() {
+    const cantidadProductos = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    const totalCompra = carrito.reduce((total, producto) => total + producto.total, 0).toFixed(2);
+
+    
+    alert(`Tu compra es: ${cantidadProductos} productos con un importe total de ${totalCompra}€.`);
+});
+
+
+// Cuando hagamos click al botón eliminar producto:
+// -> Se elimina el último producto del carrito y se actualiza de nuevo la vista del carrito.
+// -> Sí no hay productos que eliminar salta la alerta.
+document.getElementById('eliminar-producto').addEventListener('click', function() {
+    if (carrito.length > 0) {
+        carrito.pop();
+        actualizarCarrito();
+    } else {
+        alert("No hay productos para eliminar.");
+    }
+});
+</script>
+
+</body>
+</html>
+
+
+
