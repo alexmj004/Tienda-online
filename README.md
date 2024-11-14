@@ -1,4 +1,4 @@
-FUNKO POP STORE
+## FUNKO POP STORE
 
 🦸 Proyecto muy innovador para mí, ya que nunca había hecho proyectos con JS. Muy interasente aportar dinamismo a una página web.
 
